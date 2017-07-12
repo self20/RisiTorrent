@@ -85,7 +85,7 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
   <input type='password' name='password' placeholder='Mot de passe' required class='form-control input-lg' />
   <button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Connexion</button>
   <div>
-    <a href='signup.php'>Create account</a> or <a href='recover.php'>reset password</a>
+    <a href='signup.php'>Créer un compte</a> ou <a href='recover.php'>mot de passe oubliée</a>
   </div>
 </form>
 </section>
