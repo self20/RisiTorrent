@@ -37,26 +37,11 @@ function left()
 //== End Failed logins
 
 $HTMLOUT ="";
-		$HTMLOUT.= "<div class='modal-dialog'><div class='modal-content'>";
 	unset($returnto);
 if (!empty($_GET["returnto"])) {
     $returnto = htmlsafechars($_GET["returnto"]);
-        $HTMLOUT.= "<div class='modal-header'><h2 class='modal-title text-center text-info' id='myModalLabel'><b>{$lang['login_not_logged_in']}</b></h2></div>";
-        $HTMLOUT.= "<div class='modal-content text-center'><span class='text-warning'>{$lang['login_error']}</span></div>";
 }
-        $HTMLOUT.= "<div class='modal-body'>{$lang['login_cookies']}<br />{$lang['login_cookies1']}<br />
-		<span class='badge btn btn-default disabled' style='color:#fff'>{$INSTALLER09['failedlogins']}</span>&nbsp;{$lang['login_failed']}<br />{$lang['login_failed_1']}&nbsp;<span class='badge btn btn-default disabled'>".left()."</span>{$lang['login_failed_2']}".(left()>1?"":"s")."&nbsp;{$lang['login_remain']}</div>";
-$got_ssl = isset($_SERVER['HTTPS']) && (bool)$_SERVER['HTTPS'] == true ? true : false;
-//== click X by Retro
-$value = array(
-    '...',
-    '...',
-    '...',
-    '...',
-    '...',
-    '...'
-);
-$value[rand(1, count($value) - 1) ] = 'X';
+
 $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">
 <TITLE>Welcome to &nbsp;" . $INSTALLER09["site_name"] . "</TITLE>
