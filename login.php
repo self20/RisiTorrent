@@ -57,14 +57,36 @@ $value = array(
     '...'
 );
 $value[rand(1, count($value) - 1) ] = 'X';
-$HTMLOUT.= "".($INSTALLER09['captcha_on'] ? "<script>
-	  /*<![CDATA[*/
-	  $(document).ready(function () {
-	  $('#captchalogin').simpleCaptcha();
-    });
-    /*]]>*/
-    </script>" : "")."
-    <link href="dist/css/flat-ui.css" rel="stylesheet">
+$HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">
+<TITLE>Welcome to &nbsp;" . $INSTALLER09["site_name"] . "</TITLE>
+    <meta http-equiv='Content-Language' content='en-us' />
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><meta name='MSSmartTagsPreventParsing' content='TRUE' />
+
+<script src='http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=1,initial-scale=1,user-scalable=1' />
+<title>Insert title here</title>
+<!-- Custom CSS -->
+<link rel='stylesheet' type='text/css' href='style.css' />
+<!-- Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900' rel='stylesheet' type='text/css'>
+<!-- Bootstrap Core CSS -->
+<link type='text/css' rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+  <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!-- jQuery Library -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js'></script>
+<!-- Bootstrap Core JS -->
+<script src='http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+
+    <link rel='stylesheet' href='./style.css' type='text/css' />
+    
     <form class='form-horizontal' role='form' method='post' title='login' action='takelogin.php'>
 <div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-user'></i></span><input type='text' class='form-control' name='username' placeholder='Username'></div><br />
 <div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-lock'></i></span><input type='password' class='form-control' name='password' placeholder='Password'></div>
