@@ -70,7 +70,7 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
 <title>Insert title here</title>
 <!-- Custom CSS -->
 <link rel='stylesheet' type='text/css' href='style.css' />
-<link href="dist/css/flat-ui.css" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/../dist/css/flat-ui.css' />
 <!-- Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900' rel='stylesheet' type='text/css'>
 <!-- Bootstrap Core CSS -->
