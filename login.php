@@ -70,6 +70,7 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
 <title>Insert title here</title>
 <!-- Custom CSS -->
 <link rel='stylesheet' type='text/css' href='style.css' />
+<link href="dist/css/flat-ui.css" rel="stylesheet">
 <!-- Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900' rel='stylesheet' type='text/css'>
 <!-- Bootstrap Core CSS -->
@@ -86,7 +87,7 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
 <script src='http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
 
     <link rel='stylesheet' href='./style.css' type='text/css' />
-    
+
     <form class='form-horizontal' role='form' method='post' title='login' action='takelogin.php'>
 <div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-user'></i></span><input type='text' class='form-control' name='username' placeholder='Username'></div><br />
 <div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-lock'></i></span><input type='password' class='form-control' name='password' placeholder='Password'></div>
