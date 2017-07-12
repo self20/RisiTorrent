@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # U-232-V5
 
 ```
@@ -223,3 +224,7 @@ Install `memcached` and zend `opcode` cache before installing U-232 V5.
 
 6. `Staff` is automatically added to the same two files, but you have to make sure the member is offline before you promote them.
 
+=======
+# RisiTorrent
+>>>>>>> c5079eda725894a0a3ad7a9e2bff954cd18343a0
+# RisiTorrent
