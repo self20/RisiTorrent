@@ -78,12 +78,12 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
 <form method='post' action='takelogin.php'>
   <div>
 
-             <div <h4>Welcome to </h4>" . $INSTALLER09["site_name"] . "</a>
+             <div <h4>Bienvenue sur </h4>" . $INSTALLER09["site_name"] . "</a>
 
   </div>
-  <input type='username' name='username' placeholder='Username' required class='form-control input-lg' />
-  <input type='password' name='password' placeholder='Password' required class='form-control input-lg' />
-  <button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Login</button>
+  <input type='username' name='pseudo' placeholder='Pseudo' required class='form-control input-lg' />
+  <input type='password' name='password' placeholder='Mot de passe' required class='form-control input-lg' />
+  <button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Connexion</button>
   <div>
     <a href='signup.php'>Create account</a> or <a href='recover.php'>reset password</a>
   </div>
