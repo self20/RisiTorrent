@@ -1,16 +1,3 @@
-/**
- /-------------------------------------------------------------------------\
-|   https://github.com/Bigjoos/ -------------------------------------------|
-|--------------------------------------------------------------------------|
-|   Licence Info: GPL  ----------------------------------------------------|
-|--------------------------------------------------------------------------|
-|   Copyright (C) 2010 U-232 V4	-------------------------------------------|
-|--------------------------------------------------------------------------|
-|   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon. --|
-|--------------------------------------------------------------------------|
-|   Project Leaders: Mindless, Autotron, whocares, son.--------------------|
- \------------------------------------------------------------------------/
-*/
 body {
   margin-right: auto;
   margin-left: auto;
@@ -131,7 +118,7 @@ textarea.shrink { width:85%; }
 
 /* ================= GLOBAL STYLES  ================== */
 
-body.background-1 {background-image: url(themeChanger/images/bgs/bg-1.jpg);}
+body.background-1 {background-image: url(./images/fontlogin.jpg);}
 body.background-2 {background-image: url(themeChanger/images/bgs/bg-2.jpg);background-color: #ccc;background-repeat: repeat-x;background-attachment: fixed;}
 body.background-3 {background-image: url(themeChanger/images/bgs/bg-3.jpg);background-color: #d6d7d7;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
 body.background-4 {background-image: url(themeChanger/images/bgs/bg-4.jpg);background-color: #0c0c0c;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
@@ -207,7 +194,7 @@ nav ul, ul {
     list-style:none;
 }
 .bootpanel-1 .panel-body  	{background-image: url(themeChanger/images/bgs/bg-1.jpg);}
-.bootpanel-2 .panel-body      {background-image: url(themeChanger/images/bgs/bg-2.jpg);background-color: #ccc;background-repeat: repeat-x;background-attachment: fixed;}	
+.bootpanel-2 .panel-body      {background-image: url(themeChanger/images/bgs/bg-2.jpg);background-color: #ccc;background-repeat: repeat-x;background-attachment: fixed;}
 .bootpanel-3 .panel-body     {background-image: url(themeChanger/images/bgs/bg-3.jpg);background-color: #d6d7d7;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
 .bootpanel-4 .panel-body {background-image: url(themeChanger/images/bgs/bg-4.jpg);background-color: #0c0c0c;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
 .bootpanel-5 .panel-body {background-image: url(themeChanger/images/bgs/bg-5.jpg);background-color: #161616;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
@@ -224,7 +211,7 @@ nav ul, ul {
 .bootpanel-16 .panel-body {background-image: url(themeChanger/images/bgs/bg-16.jpg);background-color: #000103;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
 
 .listgrp-1 .list-group-item 	{background-image: url(themeChanger/images/bgs/bg-1.jpg);}
-.listgrp-2 .list-group-item      {background-image: url(themeChanger/images/bgs/bg-2.jpg);}	
+.listgrp-2 .list-group-item      {background-image: url(themeChanger/images/bgs/bg-2.jpg);}
 .listgrp-3 .list-group-item     {background-image: url(themeChanger/images/bgs/bg-3.jpg);}
 .listgrp-4 .list-group-item {background-image: url(themeChanger/images/bgs/bg-4.jpg);}
 .listgrp-5 .list-group-item {background-image: url(themeChanger/images/bgs/bg-5.jpg);}
@@ -395,7 +382,7 @@ footer, nav, navbar {
     border:0;
     outline:0;
     font-size:100%;
-    
+
     background:transparent;
 }
 
@@ -450,7 +437,7 @@ transition: all 300ms ease-in;
     -o-perspective: 1000px;
     -ms-perspective: 1000px;
     perspective: 1000px;
-} 
+}
 #icarousel div.slide {
     #border-radius: 4px;
     #border: 5px #000 solid;
@@ -476,20 +463,20 @@ a#iCarouselPrev {
     left: -50px;
     background-position: left top;
 }
- 
+
 a#iCarouselPrev:hover {
     background-position: left bottom;
 }
- 
+
 a#iCarouselNext {
     right: 290px;
     background-position: right top;
 }
- 
+
 a#iCarouselNext:hover {
     background-position: right bottom;
 }
- 
+
 /* The Preloader in the Slider */
 #iCarousel-preloader {
     position: absolute;
@@ -521,7 +508,7 @@ a#iCarouselNext:hover {
         border-radius: 5px;
         cursor: pointer;
 }
- 
+
 #iCarousel-timer div {
         border-radius: 3px;
 }
