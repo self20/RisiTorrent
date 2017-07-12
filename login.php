@@ -88,27 +88,26 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
 
     <link rel='stylesheet' href='./style.css' type='text/css' />
 
-    <form class='form-horizontal' role='form' method='post' title='login' action='takelogin.php'>
-<div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-user'></i></span><input type='text' class='form-control' name='username' placeholder='Username'></div><br />
-<div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-lock'></i></span><input type='password' class='form-control' name='password' placeholder='Password'></div>
-<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'><u class='text-success'><b>{$lang['login_use_ssl']}</b></u><br />
-<label>{$lang['login_ssl1']}&nbsp;<input type='checkbox' name='use_ssl' " . ($got_ssl ? "checked='checked'" : "disabled='disabled' title='SSL connection not available'") . " value='1' id='ssl'/></label><br />
-<label class='text-left' for='ssl2'>{$lang['login_ssl2']}&nbsp;<input type='checkbox' name='perm_ssl' " . ($got_ssl ? "" : "disabled='disabled' title='SSL connection not available'") . " value='1' id='ssl2'/></label>
-</div></div>".($INSTALLER09['captcha_on'] ? "<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1' id='captchalogin'></div></div>" : "") . "
-<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'>{$lang['login_click']}&nbsp;<strong>{$lang['login_x']}</strong>&nbsp;</div></div>
-<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'>";
-for ($i = 0; $i < count($value); $i++) {
-    $HTMLOUT.= "<span>&nbsp;<input name=\"submitme\" type=\"submit\" value=\"{$value[$i]}\" class=\"btn btn-small btn-primary\">&nbsp;</span>";
-}
-if (isset($returnto)) $HTMLOUT.= "<input type='hidden' name='returnto' value='" . htmlsafechars($returnto) . "'>\n";
-$HTMLOUT.= "</div></div>
-<div class='form-group text-center'>
-<div class='col-sm-10  col-sm-offset-1'>
-<a href='signup.php'><span class='btn btn-primary text-center'>{$lang['login_signup']}</span></a>&nbsp;&nbsp;
-<a href='resetpw.php'><span class='btn btn-primary text-center'>{$lang['login_forgot']}</span></a>&nbsp;&nbsp;
-<a href='recover.php'><span class='btn btn-primary text-center'>{$lang['login_forgot_1']}</span></a>
-</div></div></form>";
-$HTMLOUT.="</div></div>
- ";
-echo stdhead("{$lang['login_login_btn']}", true) . $HTMLOUT . stdfoot($stdfoot);
+    <section class='container'>
+  <section class='form-horizontal'>
+<form method='post' action='takelogin.php'>
+  <div>
+
+             <div <h4>Welcome to </h4>" . $INSTALLER09["site_name"] . "</a>
+
+  </div>
+  <input type='username' name='username' placeholder='Username' required class='form-control input-lg' />
+  <input type='password' name='password' placeholder='Password' required class='form-control input-lg' />
+  <button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Login</button>
+  <div>
+    <a href='signup.php'>Create account</a> or <a href='recover.php'>reset password</a>
+  </div>
+</form>
+</section>
+</section>";
+
+if (isset($returnto))
+$HTMLOUT .= "<input type='hidden' name='returnto' value='" . htmlentities($returnto) . "' />\n";
+
+echo $HTMLOUT . stdfoot();o stdhead("{$lang['login_login_btn']}", true) . $HTMLOUT . stdfoot($stdfoot);
 ?>
