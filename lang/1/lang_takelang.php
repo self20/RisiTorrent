@@ -1,28 +1,11 @@
 <?php
-/**
- |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
- |--------------------------------------------------------------------------|
- |   Licence Info: WTFPL                                                    |
- |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
- |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
- |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
- |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
 $lang = array(
     //*lang terms by yoooov
-    'language_loc1' => 'En',
-    'language_loc2' => 'Dk',
-    'language_loc3' => 'Rm',
-    'language_loc4' => 'Fr',
-    'language_choice' => 'Choose Language',
-    'language_close' => 'Close'
+    'language_loc1' => 'FR',
+    'language_loc2' => 'EN',
+    'language_loc3' => '?',
+    'language_loc4' => '?',
+    'language_choice' => 'Choissisez une langue',
+    'language_close' => 'Fermez'
 );
 ?>

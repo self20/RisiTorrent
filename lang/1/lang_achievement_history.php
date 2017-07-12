@@ -1,43 +1,26 @@
 <?php
-/**
- |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
- |--------------------------------------------------------------------------|
- |   Licence Info: WTFPL                                                    |
- |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
- |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
- |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
- |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
 $lang = array(
     //stderr
-    'achievement_history_err' => 'Error',
-    'achievement_history_off' => 'It appears that the achievement system is offline.',
-    'achievement_history_err1' => 'It appears that you have entered an invalid id.',
-    'achievement_history_no' => 'No Achievements',
-    'achievement_history_err2' => 'It appears that ',
-    'achievement_history_err3' => ' currently has no achievements.',
+    'achievement_history_err' => 'Erreur',
+    'achievement_history_off' => 'Il semble que le système de succès est hors-ligne pour le moment.',
+    'achievement_history_err1' => 'Il semble que vous avez entré un identifiant invalide.',
+    'achievement_history_no' => 'Pas de succès',
+    'achievement_history_err2' => 'Il semble que ',
+    'achievement_history_err3' => ' a pour le moment aucun succès.',
     // body
-    'achievement_history_al' => 'Achievements List',
-    'achievement_history_fpc' => 'Forum Post Counter',
-    'achievement_history_ftc' => 'Forum Topic Counter',
-    'achievement_history_ic' => 'Invite Counter',
-    'achievement_history_afu' => 'Achievements for user:',
-    'achievement_history_c' => 'Currently ',
-    'achievement_history_a' => ' achievement',
-    'achievement_history_pa' => ' Points Available // ',
-    'achievement_history_ps' => ' Points spent.',
-    'achievement_history_award' => 'Award',
+    'achievement_history_al' => 'Liste des succès',
+    'achievement_history_fpc' => 'Compteur des sujets du forum',
+    'achievement_history_ftc' => 'Compteur des messages du forum',
+    'achievement_history_ic' => 'Compteur des invitations',
+    'achievement_history_afu' => 'Succès pour l\'utilisateur:',
+    'achievement_history_c' => 'Actuellement ',
+    'achievement_history_a' => ' exploit',
+    'achievement_history_pa' => ' Points disponibles // ',
+    'achievement_history_ps' => ' Points dépensés.',
+    'achievement_history_award' => 'Prix',
     'achievement_history_descr' => 'Description',
-    'achievement_history_date' => 'Date Earned',
+    'achievement_history_date' => 'Date',
     //stdhead
-    'achievement_history_stdhead' => 'Achievement History'
+    'achievement_history_stdhead' => 'Historique des succès'
 );
 ?>
