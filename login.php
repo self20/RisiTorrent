@@ -64,6 +64,7 @@ $HTMLOUT.= "".($INSTALLER09['captcha_on'] ? "<script>
     });
     /*]]>*/
     </script>" : "")."
+    <link href="dist/css/flat-ui.css" rel="stylesheet">
     <form class='form-horizontal' role='form' method='post' title='login' action='takelogin.php'>
 <div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-user'></i></span><input type='text' class='form-control' name='username' placeholder='Username'></div><br />
 <div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-lock'></i></span><input type='password' class='form-control' name='password' placeholder='Password'></div>
