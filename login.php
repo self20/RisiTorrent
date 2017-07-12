@@ -89,16 +89,16 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
     <link rel='stylesheet' href='./style.css' type='text/css' />
 
     <section class='container'>
-  <section class='form-horizontal'>
+  <section class='login-form'>
 <form method='post' action='takelogin.php'>
   <div>
 
              <div <h4>Welcome to </h4>" . $INSTALLER09["site_name"] . "</a>
 
   </div>
-  <input type='username' name='pseudo' placeholder='Pseudo' required class='form-control input-lg text-center' />
-  <input type='password' name='mot de passe' placeholder='Mot de passe' required class='form-control input-lg text-center' />
-  <button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Connexion</button>
+  <input type='username' name='username' placeholder='Username' required class='form-control input-lg' />
+  <input type='password' name='password' placeholder='Password' required class='form-control input-lg' />
+  <button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Login</button>
   <div>
     <a href='signup.php'>Create account</a> or <a href='recover.php'>reset password</a>
   </div>
