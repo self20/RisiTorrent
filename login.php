@@ -89,7 +89,7 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
     <link rel='stylesheet' href='./style.css' type='text/css' />
 
     <section class='container'>
-  <section class='login-form'>
+  <section class='form-horizontal'>
 <form method='post' action='takelogin.php'>
   <div>
 
