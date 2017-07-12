@@ -94,7 +94,7 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
 <div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'><u class='text-success'><b>{$lang['login_use_ssl']}</b></u><br />
 <label>{$lang['login_ssl1']}&nbsp;<input type='checkbox' name='use_ssl' " . ($got_ssl ? "checked='checked'" : "disabled='disabled' title='SSL connection not available'") . " value='1' id='ssl'/></label><br />
 <label class='text-left' for='ssl2'>{$lang['login_ssl2']}&nbsp;<input type='checkbox' name='perm_ssl' " . ($got_ssl ? "" : "disabled='disabled' title='SSL connection not available'") . " value='1' id='ssl2'/></label>
-</div></div>".($INSTALLER09['captcha_on'] ? "<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1' id='captchalogin'></div></div>" : "") . "
+</div></div>".</div>" : "") . "
 <div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'>{$lang['login_click']}&nbsp;<strong>{$lang['login_x']}</strong>&nbsp;</div></div>
 <div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'>";
 for ($i = 0; $i < count($value); $i++) {
