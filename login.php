@@ -57,59 +57,34 @@ $value = array(
     '...'
 );
 $value[rand(1, count($value) - 1) ] = 'X';
-$HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
-<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">
-<TITLE>Welcome to &nbsp;" . $INSTALLER09["site_name"] . "</TITLE>
-    <meta http-equiv='Content-Language' content='en-us' />
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><meta name='MSSmartTagsPreventParsing' content='TRUE' />
-
-<script src='http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-<meta name='viewport' content='width=1,initial-scale=1,user-scalable=1' />
-<title>Insert title here</title>
-<!-- Custom CSS -->
-<link rel='stylesheet' type='text/css' href='style.css' />
-<!-- Google Font -->
-<link href='http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900' rel='stylesheet' type='text/css'>
-<!-- Bootstrap Core CSS -->
-<link type='text/css' rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-  <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
-  <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
-<![endif]-->
-<!-- jQuery Library -->
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js'></script>
-<!-- Bootstrap Core JS -->
-<script src='http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-
-    <link rel='stylesheet' href='./style.css' type='text/css' />
-
-     <style>
-
-</style>
-
-    <section class='container'>
-  <section class='login-form'>
-<form method='post' action='takelogin.php'>
-  <div>
-
-             <div <h4>Welcome to </h4>" . $INSTALLER09["site_name"] . "</a>
-
-  </div>
-  <input type='username' name='username' placeholder='Username' required class='form-control input-lg' />
-  <input type='password' name='password' placeholder='Password' required class='form-control input-lg' />
-  <button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Login</button>
-  <div>
-    <a href='signup.php'>Create account</a> or <a href='recover.php'>reset password</a>
-  </div>
-</form>
-</section>
-</section>";
-
-if (isset($returnto))
-$HTMLOUT .= "<input type='hidden' name='returnto' value='" . htmlentities($returnto) . "' />\n";
-
-echo $HTMLOUT . stdfoot();
+$HTMLOUT.= "".($INSTALLER09['captcha_on'] ? "<script>
+	  /*<![CDATA[*/
+	  $(document).ready(function () {
+	  $('#captchalogin').simpleCaptcha();
+    });
+    /*]]>*/
+    </script>" : "")."
+    <form class='form-horizontal' role='form' method='post' title='login' action='takelogin.php'>
+<div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-user'></i></span><input type='text' class='form-control' name='username' placeholder='Username'></div><br />
+<div class='input-group input-group-md text-center'><span class='input-group-addon'><i class='fa fa-lock'></i></span><input type='password' class='form-control' name='password' placeholder='Password'></div>
+<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'><u class='text-success'><b>{$lang['login_use_ssl']}</b></u><br />
+<label>{$lang['login_ssl1']}&nbsp;<input type='checkbox' name='use_ssl' " . ($got_ssl ? "checked='checked'" : "disabled='disabled' title='SSL connection not available'") . " value='1' id='ssl'/></label><br />
+<label class='text-left' for='ssl2'>{$lang['login_ssl2']}&nbsp;<input type='checkbox' name='perm_ssl' " . ($got_ssl ? "" : "disabled='disabled' title='SSL connection not available'") . " value='1' id='ssl2'/></label>
+</div></div>".($INSTALLER09['captcha_on'] ? "<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1' id='captchalogin'></div></div>" : "") . "
+<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'>{$lang['login_click']}&nbsp;<strong>{$lang['login_x']}</strong>&nbsp;</div></div>
+<div class='form-group text-center'><div class='col-sm-10 col-sm-offset-1'>";
+for ($i = 0; $i < count($value); $i++) {
+    $HTMLOUT.= "<span>&nbsp;<input name=\"submitme\" type=\"submit\" value=\"{$value[$i]}\" class=\"btn btn-small btn-primary\">&nbsp;</span>";
+}
+if (isset($returnto)) $HTMLOUT.= "<input type='hidden' name='returnto' value='" . htmlsafechars($returnto) . "'>\n";
+$HTMLOUT.= "</div></div>
+<div class='form-group text-center'>
+<div class='col-sm-10  col-sm-offset-1'>
+<a href='signup.php'><span class='btn btn-primary text-center'>{$lang['login_signup']}</span></a>&nbsp;&nbsp;
+<a href='resetpw.php'><span class='btn btn-primary text-center'>{$lang['login_forgot']}</span></a>&nbsp;&nbsp;
+<a href='recover.php'><span class='btn btn-primary text-center'>{$lang['login_forgot_1']}</span></a>
+</div></div></form>";
+$HTMLOUT.="</div></div>
+ ";
+echo stdhead("{$lang['login_login_btn']}", true) . $HTMLOUT . stdfoot($stdfoot);
+?>
