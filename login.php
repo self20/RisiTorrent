@@ -109,5 +109,4 @@ $HTMLOUT .= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"
 if (isset($returnto))
 $HTMLOUT .= "<input type='hidden' name='returnto' value='" . htmlentities($returnto) . "' />\n";
 
-echo $HTMLOUT . stdfoot();o stdhead("{$lang['login_login_btn']}", true) . $HTMLOUT . stdfoot($stdfoot);
-?>
+echo $HTMLOUT . stdfoot();
