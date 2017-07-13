@@ -138,16 +138,16 @@ $htmlout .='
 					  <div class='navbor-dropdown'>
 
         			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/topten.php'>{$lang['gl_stats']}</a>
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/faq.php'><font color='#4a4a4a'>{$lang['gl_faq']}</font><br></a>
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/rules.php'><font color='#4a4a4a'>{$lang['gl_rules']}</font><br></a>
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/chat.php'><font color='#4a4a4a'>{$lang['gl_irc']}</font><br></a>
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/staff.php'><font color='#4a4a4a'>{$lang['gl_staff']}</font><br></a>
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/wiki.php'><font color='#4a4a4a'>{$lang['gl_wiki']}</font><br></a>
-        			<a class 'navbor-item' href='#' onclick='radio();'><font color='#4a4a4a'>{$lang['gl_radio']}</font><br></a>
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/rsstfreak.php'><font color='#4a4a4a'>{$lang['gl_tfreak']}</font><br></a>
-              <a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/casino.php'><font color='#4a4a4a'>{$lang['gl_casino']}</font><br></a>
-              <a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/blackjack.php'><font color='#4a4a4a'>{$lang['gl_bjack']}</font><br></a>
-              <a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/sitepot.php'><font color='#4a4a4a'>{$lang['gl_sitepot']}</font><br></a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/faq.php'>{$lang['gl_faq']}></a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/rules.php'>{$lang['gl_rules']}</a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/chat.php'>{$lang['gl_irc']}</a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/staff.php'>{$lang['gl_staff']}</a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/wiki.php'>{$lang['gl_wiki']}</a>
+        			<a class='navbor-item' href='#' onclick='radio();'>{$lang['gl_radio']}</a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/rsstfreak.php'>{$lang['gl_tfreak']}</a>
+              <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/casino.php'>{$lang['gl_casino']}</a>
+              <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/blackjack.php'>{$lang['gl_bjack']}</a>
+              <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/sitepot.php'>{$lang['gl_sitepot']}</a>
  					  </div>
 					</div>
 
