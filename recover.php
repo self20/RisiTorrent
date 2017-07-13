@@ -1,22 +1,22 @@
 <?php
 /**
  |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                			    |
+ |   https://github.com/Bigjoos/                                            |
  |--------------------------------------------------------------------------|
- |   Licence Info: GPL			                                    |
+ |   Licence Info: WTFPL                                                    |
  |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5					    |
+ |   Copyright (C) 2010 U-232 V5                                            |
  |--------------------------------------------------------------------------|
  |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
  |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.					    |
+ |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
  |--------------------------------------------------------------------------|
   _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
  / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
 ( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
  \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
  */
-require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'bittorrent.php');
+require_once (__DIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'bittorrent.php');
 require_once (INCL_DIR . 'user_functions.php');
 require_once (INCL_DIR . 'password_functions.php');
 dbconn();
@@ -104,16 +104,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     });
     /*]]>*/
       </script>
-	  	    <img src='images/bg.jpg' id='bg' />
-        	<link rel='stylesheet' type='text/css' href='recover.css' />
-<div class='recover' style='margin-left:24%;width:45%'>
-<form class='form-horizontal  panel inverse recover' role='form' method='post' action='{$_SERVER['PHP_SELF']}'>
+<div style='margin-left:24%;width:45%'>
+<form class='form-horizontal  panel inverse' role='form' method='post' action='{$_SERVER['PHP_SELF']}'>
 <h2>{$lang['recover_unamepass']}</h2>
 <p>{$lang['recover_form']}</p>
 <div class='form-group'><div class='col-sm-10 col-sm-offset-1'>" . ($INSTALLER09['captcha_on'] ? "</div></div>
 <div class='form-group'><div class='col-sm-10 col-sm-offset-1' id='captcharec'></div></div>" : "") . "
 <div class='form-group'><div class='col-sm-10 col-sm-offset-1'><input class='form-control' type='text' placeholder='{$lang['recover_regdemail']}' name='email'></div></div>
-<div class='form-group'><div class='col-sm-10 col-sm-offset-5'><input type='submit' value='{$lang['recover_btn']}' class='btn btn-lg btn-block btn-info'></div></div>
+<div class='form-group'><div class='col-sm-10 col-sm-offset-5'><input type='submit' value='{$lang['recover_btn']}' class='btn btn-default active'></div></div>
 </form></div>";
 echo stdhead($lang['head_recover'], true, $stdhead) . $HTMLOUT . stdfoot();
 }
