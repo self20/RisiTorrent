@@ -127,25 +127,24 @@ $htmlout .='
 
    <div id='navMenu' class='navbor-menu'>
 
-    <div class='navbor-start'>
+   <div class='navbor-start'>
 
         <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/donate.php'>{$lang['gl_donate']}</a>
-        <a class='btn btn-primary btn-sm' href='" . $INSTALLER09['baseurl'] . "/forums.php'>{$lang['gl_forums']}</a>
-	<div class='btn-group'>
-					  <button class='btn btn-primary navbar-btn btn-sm'>{$lang['gl_general']}</button>
-					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
-						<span class='caret'></span>
-					  </button>
-					  <ul class='dropdown-menu pull-right'>
-						<!-- dropdown menu links -->
-			<li><a href='" . $INSTALLER09['baseurl'] . "/topten.php'>{$lang['gl_stats']}</a></li>
-			<li><a href='" . $INSTALLER09['baseurl'] . "/faq.php'>{$lang['gl_faq']}</a></li>
-			<li><a href='" . $INSTALLER09['baseurl'] . "/rules.php'>{$lang['gl_rules']}</a></li>
-			<li><a href='" . $INSTALLER09['baseurl'] . "/chat.php'>{$lang['gl_irc']}</a></li>
-			<li><a href='" . $INSTALLER09['baseurl'] . "/staff.php'>{$lang['gl_staff']}</a></li>
-			<li><a href='" . $INSTALLER09['baseurl'] . "/wiki.php'>{$lang['gl_wiki']}</a></li>
-			<li><a href='#' onclick='radio();'>{$lang['gl_radio']}</a></li>
-			<li><a href='" . $INSTALLER09['baseurl'] . "/rsstfreak.php'>{$lang['gl_tfreak']}</a></li>
+
+	       <div class='navbar-item has-dropdown is-hoverable'>
+
+					  <a class='navbar-link  is-active'>{$lang['gl_general']}</a>
+
+					  <div class='navbar-dropdown'>
+
+      			<a class 'navbar-item' href='" . $INSTALLER09['baseurl'] . "/topten.php'>{$lang['gl_stats']}</a>
+      			<li><a href='" . $INSTALLER09['baseurl'] . "/faq.php'>{$lang['gl_faq']}</a></li>
+      			<li><a href='" . $INSTALLER09['baseurl'] . "/rules.php'>{$lang['gl_rules']}</a></li>
+      			<li><a href='" . $INSTALLER09['baseurl'] . "/chat.php'>{$lang['gl_irc']}</a></li>
+      			<li><a href='" . $INSTALLER09['baseurl'] . "/staff.php'>{$lang['gl_staff']}</a></li>
+      			<li><a href='" . $INSTALLER09['baseurl'] . "/wiki.php'>{$lang['gl_wiki']}</a></li>
+      			<li><a href='#' onclick='radio();'>{$lang['gl_radio']}</a></li>
+      			<li><a href='" . $INSTALLER09['baseurl'] . "/rsstfreak.php'>{$lang['gl_tfreak']}</a></li>
                         <li><a href='" . $INSTALLER09['baseurl'] . "/casino.php'>{$lang['gl_casino']}</a></li>
                         <li><a href='" . $INSTALLER09['baseurl'] . "/blackjack.php'>{$lang['gl_bjack']}</a></li>
                         <li><a href='" . $INSTALLER09['baseurl'] . "/sitepot.php'>{$lang['gl_sitepot']}</a></li>
