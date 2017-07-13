@@ -129,7 +129,7 @@ $htmlout .='
 
    <div class='navbor-start'>
 
-        <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/donate.php'>{$lang['gl_donate']}</a>
+        <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/donate.php'><font color='#4a4a4a'>{$lang['gl_donate']}</font></a>
 
 	       <div class='navbor-item has-dropdown is-hoverable'>
 
@@ -137,7 +137,7 @@ $htmlout .='
 
 					  <div class='navbor-dropdown'>
 
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/topten.php'><font color='#4a4a4a'>{$lang['gl_stats']}</font><br></a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/topten.php'>{$lang['gl_stats']}</a>
         			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/faq.php'><font color='#4a4a4a'>{$lang['gl_faq']}</font><br></a>
         			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/rules.php'><font color='#4a4a4a'>{$lang['gl_rules']}</font><br></a>
         			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/chat.php'><font color='#4a4a4a'>{$lang['gl_irc']}</font><br></a>
@@ -150,6 +150,7 @@ $htmlout .='
               <a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/sitepot.php'><font color='#4a4a4a'>{$lang['gl_sitepot']}</font><br></a>
  					  </div>
 					</div>
+
 				<div class='btn-group'>
 					  <button class='btn btn-primary navbar-btn btn-sm'>{$lang['gl_torrent']}</button>
 					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
