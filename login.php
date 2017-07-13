@@ -7,7 +7,7 @@
  *   Project Leaders: Mindless, putyn.
  **/
  //== Also thanks to original creators http://www.bootstrapzen.com/item/261/white-login-form-boxed/ for the login page
- 
+
 require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'include'.DIRECTORY_SEPARATOR.'bittorrent.php');
 require_once(INCL_DIR.'user_functions.php');
 require_once(CLASS_DIR.'page_verify.php');
@@ -20,7 +20,7 @@ get_template();
 ini_set('session.use_trans_sid', '0');
 $stdhead = array(/** include js **/'js' => array('jquery','jquery.simpleCaptcha-0.2'));
 $lang = array_merge( load_language('global'), load_language('login') );
-$newpage = new page_verify(); 
+$newpage = new page_verify();
 $newpage->create('takelogin');
   $left='';
   //== 09 failed logins
@@ -84,22 +84,21 @@ $newpage->create('takelogin');
 	    <section class='login-form'>
 		<form method='post' action='takelogin.php'>
 			<div>
-				
+
 				         <div <h4>Welcome to </h4>" . $INSTALLER09["site_name"] . "</a>
 
-			</div>			
-			<input type='username' name='username' placeholder='Username' required class='form-control input-lg' />
-			<input type='password' name='password' placeholder='Password' required class='form-control input-lg' />
+			</div>
+			<input type='username' name='username' placeholder='Pseudo' required class='form-control input-lg text-center' />
+			<input type='password' name='password' placeholder='Mot de passe' required class='form-control input-lg text-center' />
 			<button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Login</button>
 			<div>
-				<a href='signup.php'>Create account</a> or <a href='recover.php'>reset password</a>
+				<a href='signup.php'>Créer un compte</a> or <a href='recover.php'>mot de passe oubliée</a>
 			</div>
 		</form>
 		</section>
 	</section>";
-             
+
     if (isset($returnto))
     $HTMLOUT .= "<input type='hidden' name='returnto' value='" . htmlentities($returnto) . "' />\n";
-     
-echo $HTMLOUT . stdfoot();
 
+echo $HTMLOUT . stdfoot();
