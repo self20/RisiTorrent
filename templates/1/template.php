@@ -122,7 +122,7 @@ $htmlout .='
    <div class='navbor-brand'>
 
   <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
-    <img src='http://i.imgur.com/Liaqweo.png' alt='RisiTorrent' width='112' height='28'>
+    <img src='http://i.imgur.com/bwMoTR3.png' alt='RisiTorrent' width='112' height='28'>
   </a>
 
    <div id='navMenu' class='navbor-menu'>
@@ -131,7 +131,7 @@ $htmlout .='
 
         <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/donate.php'>{$lang['gl_donate']}</a>
 
-	       <div class='navbor-item has-dropdown is-hoverable'>
+	      <div class='navbor-item has-dropdown is-hoverable'>
 
 					  <a class='navbor-link  is-active'>{$lang['gl_general']}</a>
 
@@ -149,7 +149,7 @@ $htmlout .='
               <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/blackjack.php'>{$lang['gl_bjack']}</a>
               <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/sitepot.php'>{$lang['gl_sitepot']}</a>
  					  </div>
-					</div>
+			  </div>
 
 				<div class='btn-group'>
 					  <button class='btn btn-primary navbar-btn btn-sm'>{$lang['gl_torrent']}</button>
