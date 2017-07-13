@@ -8,14 +8,7 @@ if (!$CURUSER) {
     get_template();
 }
 ini_set('session.use_trans_sid', '0');
-$stdfoot = '';
-if ($INSTALLER09['captcha_on'] === true)
-$stdfoot = array(
-    /** include js **/
-    'js' => array(
-           'captcha', 'jquery.simpleCaptcha-0.2'
-    )
-);
+$stdhead = array(/** include js **/'js' => array('jquery','jquery.simpleCaptcha-0.2'));
 
 $lang = array_merge(load_language('global') , load_language('login'));
 $newpage = new page_verify();
