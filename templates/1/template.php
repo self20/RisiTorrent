@@ -129,7 +129,7 @@ $htmlout .='
 
    <div class='navbor-start'>
 
-        <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/donate.php'><font color='#4a4a4a'>{$lang['gl_donate']}</font></a>
+        <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/donate.php'>{$lang['gl_donate']}</a>
 
 	       <div class='navbor-item has-dropdown is-hoverable'>
 
