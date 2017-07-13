@@ -85,14 +85,14 @@ $newpage->create('takelogin');
 		<form method='post' action='takelogin.php'>
 			<div>
 
-				         <div <h4>Welcome to </h4>" . $INSTALLER09["site_name"] . "</a>
+				         <div <h4>Bienvenue sur </h4>" . $INSTALLER09["site_name"] . "</a>
 
 			</div>
 			<input type='username' name='username' placeholder='Pseudo' required class='form-control input-lg text-center' />
 			<input type='password' name='password' placeholder='Mot de passe' required class='form-control input-lg text-center' />
-			<button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Login</button>
+			<button type='submit' name='go' class='btn btn-lg btn-block btn-info'>Connexion</button>
 			<div>
-				<a href='signup.php'>Créer un compte</a> or <a href='recover.php'>mot de passe oubliée</a>
+				<a href='signup.php'>Créer un compte</a> ou <a href='recover.php'>mot de passe oubliée</a>
 			</div>
 		</form>
 		</section>
