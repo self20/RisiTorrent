@@ -1,21 +1,4 @@
 <?php
-/**
- |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
- |--------------------------------------------------------------------------|
- |   Licence Info: WTFPL                                                    |
- |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
- |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
- |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
- |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
 require_once (__DIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'bittorrent.php');
 require_once (INCL_DIR . 'user_functions.php');
 require_once (CLASS_DIR . 'page_verify.php');
@@ -57,15 +40,18 @@ function validusername($username)
     }
     return true;
 }
+
 if (empty($wantusername) || empty($wantpassword) || empty($email) || empty($passhint) || empty($hintanswer) || empty($country)) stderr($lang['takesignup_user_error'], $lang['takesignup_blank']);
+
 if (!blacklist($wantusername)) stderr($lang['takesignup_user_error'], sprintf($lang['takesignup_badusername'], htmlsafechars($wantusername)));
+
 if ($wantpassword != $passagain) stderr($lang['takesignup_user_error'], $lang['takesignup_nomatch']);
 if (strlen($wantpassword) < 6) stderr($lang['takesignup_user_error'], $lang['takesignup_pass_short']);
+
 if (strlen($wantpassword) > 40) stderr($lang['takesignup_user_error'], $lang['takesignup_pass_long']);
+
 if ($wantpassword == $wantusername) stderr($lang['takesignup_user_error'], $lang['takesignup_same']);
-$pincode = (int)$_POST['pin_code'];
-if ($pincode != $_POST['pin_code2']) stderr($lang['takesignup_user_error'], "Pin Codes don't match");
-if (strlen((string)$pincode) != 4) stderr($lang['takesignup_user_error'], "Pin Code must be 4 digits");
+
 if (!validemail($email)) stderr($lang['takesignup_user_error'], $lang['takesignup_validemail']);
 if (!validusername($wantusername)) stderr($lang['takesignup_user_error'], $lang['takesignup_invalidname']);
 if (!(isset($_POST['day']) || isset($_POST['month']) || isset($_POST['year']))) stderr($lang['takesignup_error'], $lang['takesignup_birthday']);
@@ -103,7 +89,7 @@ check_banned_emails($email);
 $psecret = $editsecret;
 //$emails = encrypt_email($email);
 
-$ret = sql_query("INSERT INTO users (username, passhash, secret, editsecret, birthday, country, gender, pin_code, stylesheet, passhint, hintanswer, email, status, " . (!$arr[0] ? "class, " : "") . "added, last_access, time_offset, dst_in_use, free_switch) VALUES (" . implode(",", array_map("sqlesc", array(
+$ret = sql_query("INSERT INTO users (username, passhash, secret, editsecret, birthday, country, gender, stylesheet, passhint, hintanswer, email, status, " . (!$arr[0] ? "class, " : "") . "added, last_access, time_offset, dst_in_use, free_switch) VALUES (" . implode(",", array_map("sqlesc", array(
     $wantusername,
     $wantpasshash,
     $secret,
@@ -111,7 +97,6 @@ $ret = sql_query("INSERT INTO users (username, passhash, secret, editsecret, bir
     $birthday,
     $country,
     $gender,
-    $pincode,
     $INSTALLER09['stylesheet'],
     $passhint,
     $wanthintanswer,
@@ -173,9 +158,9 @@ $body = str_replace(array(
     "{$INSTALLER09['baseurl']}/confirm.php?id=$id&secret=$psecret"
 ) , $lang['takesignup_email_body']);
 
-if ($arr[0] || EMAIL_CONFIRM) 
+if ($arr[0] || EMAIL_CONFIRM)
 mail($email, "{$INSTALLER09['site_name']} {$lang['takesignup_confirm']}", $body, "{$lang['takesignup_from']} {$INSTALLER09['site_email']}");
-else 
+else
 logincookie($id, $wantpasshash);
 header("Refresh: 0; url=ok.php?type=". (!$arr[0]? "sysop" : (EMAIL_CONFIRM ? "signup&email=" . urlencode($email) : "confirm")));
 ?>
