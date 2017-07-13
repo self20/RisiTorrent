@@ -75,6 +75,7 @@ if ($row['enabled'] == 'no') bark($lang['tlogin_disabled']);
 sql_query("DELETE FROM failedlogins WHERE ip = $ip_escaped");
 $userid = (int)$row["id"];
 $row['perms'] = (int)$row['perms'];
+
 //== Start ip logger - Melvinmeow, Mindless, pdq
 $no_log_ip = ($row['perms'] & bt_options::PERMS_NO_IP);
 if ($no_log_ip) {
@@ -95,28 +96,14 @@ if (isset($_POST['use_ssl']) && $_POST['use_ssl'] == 1 && !isset($_SERVER['HTTPS
 $ssl_value = (isset($_POST['perm_ssl']) && $_POST['perm_ssl'] == 1 ? 'ssluse = 2' : 'ssluse = 1');
 $ssluse = ($row['ssluse'] == 2 ? 2 : 1);
 // output browser
-$ua = getBrowser();
-$browser = "Browser: " . $ua['name'] . " " . $ua['version'] . ". Os: " . $ua['platform'] . ". Agent : " . $ua['userAgent'];
-sql_query('UPDATE users SET browser=' . sqlesc($browser) . ', ' . $ssl_value . ', ip = ' . $ip_escaped . ', last_access=' . TIME_NOW . ', last_login=' . TIME_NOW . ' WHERE id=' . sqlesc($row['id'])) or sqlerr(__FILE__, __LINE__);
-$mc1->begin_transaction('MyUser_' . $row['id']);
-$mc1->update_row(false, array(
-    'browser' => $browser,
-    'ip' => $ip,
-    'ssluse' => $ssluse,
-    'last_access' => TIME_NOW,
-    'last_login' => TIME_NOW
-));
+$ua=getBrowser();
+$browser= "Browser: ".$ua['name']." ".$ua['version'].". Os: ".$ua['platform'].". Agent : ".$ua['userAgent'];
+sql_query('UPDATE users SET browser='.sqlesc($browser).$ssl_value.', ip = '.$ip_escaped.', last_access='.TIME_NOW.', last_login='.TIME_NOW.' WHERE id='.$row['id']) or sqlerr(__FILE__,__LINE__);
+$mc1->begin_transaction('MyUser_'.$row['id']);
+$mc1->update_row(false, array('browser' => $browser, 'ip' => $ip, 'ssluse' => $ssluse, 'last_access' => TIME_NOW, 'last_login' => TIME_NOW));
 $mc1->commit_transaction($INSTALLER09['expires']['curuser']);
-$mc1->begin_transaction('user' . $row['id']);
-$mc1->update_row(false, array(
-    'browser' => $browser,
-    'ip' => $ip,
-    'ssluse' => $ssluse,
-    'last_access' => TIME_NOW,
-    'last_login' => TIME_NOW
-));
+$mc1->begin_transaction('user'.$row['id']);
+$mc1->update_row(false, array('browser' => $browser, 'ip' => $ip, 'ssluse' => $ssluse, 'last_access' => TIME_NOW, 'last_login' => TIME_NOW));
 $mc1->commit_transaction($INSTALLER09['expires']['user_cache']);
-$passh = md5($row["passhash"] . $_SERVER["REMOTE_ADDR"]);
-logincookie($row["id"], $passh);
 header("Location: {$INSTALLER09['baseurl']}/index.php");
 ?>
