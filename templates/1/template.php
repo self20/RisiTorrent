@@ -1,21 +1,4 @@
 <?php
-/**
- |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
- |--------------------------------------------------------------------------|
- |   Licence Info: WTFPL                                                    |
- |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
- |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
- |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
- |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
  //==Template system by Terranova
 function stdhead($title = "", $msgalert = true, $stdhead = false)
 {
@@ -52,10 +35,7 @@ $htmlout .='
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
         <!-- ####################################################### -->
-        <!-- #   This website is powered by U-232 V5	           # -->
-        <!-- #   Download and support at:                          # -->
-        <!-- #     https://forum-u-232.servebeer.com               # -->
-        <!-- #   Template Modded by U-232 Dev Team                 # -->
+        <!-- #   Yatangaki           # -->
         <!-- ####################################################### -->
   <head>
     <!--<meta charset="'.charset().'" />-->
@@ -70,8 +50,9 @@ $htmlout .='
     	<link rel="stylesheet" href="templates/1/1.css" />
        	<link rel="stylesheet" href="css/font-awesome.min.css" />
     	<script src="scripts/jquery-1.11.1.js"></script>
-      	<script src="scripts/bootstrap.js"></script>	
+      	<script src="scripts/bootstrap.js"></script>
         <link rel="stylesheet" href="css/global_media.css" type="text/css" />
+        <link rel="stylesheet" href="templates/1/css/navbar.css" type="text/css" />
 <!--THemechanger-->
         <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
 	<script type="text/javascript" src="scripts/help.js"></script>
@@ -80,7 +61,7 @@ $htmlout .='
       	<script type="text/javascript" src="templates/1/themeChanger/js/colorpicker.js"></script>
         <script type="text/javascript" src="templates/1/themeChanger/js/themeChanger.js"></script>
 	<!-- Forum CSS-->
-    <link rel="stylesheet" href="templates/1/css/forum.css" /> 
+    <link rel="stylesheet" href="templates/1/css/forum.css" />
     <!-- global javascript-->
 	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -89,7 +70,7 @@ $htmlout .='
 	<!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=9"><![endif]-->
     <!-- <script src="scripts/html5shiv.js"  async></script>  -->
     <script src="scripts/respond.min.js"  async></script> <!-- used for IE8 and below-->
-    <!-- <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>  -->    
+    <!-- <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>  -->
     <script type="application/rss+xml" title="Latest Torrents" src="/rss.php?torrent_pass='.$CURUSER["torrent_pass"].'"></script>';
 	$htmlout .= "
     <style type='text/css'>#mlike{cursor:pointer;}</style>
@@ -99,7 +80,7 @@ $htmlout .='
 		//================================================== -->
 		$(function() {							// the like js
 		$('span[id*=mlike]').like232({
-		times : 5,            	// times checked 
+		times : 5,            	// times checked
 		disabled : 5,         	// disabled from liking for how many seconds
 		time  : 5,             	// period within check is performed
 		url : '/ajax.like.php'
@@ -135,7 +116,11 @@ $htmlout .='
     <body class='{$body_class}'>";
   if ($CURUSER) {
    $htmlout .="
-   <nav class='cb navbar-default navbar-fixed-top' role='navigation'>
+   <nav class='navbor'>
+   <div class="navbor-brand">
+  <a class="navbor-item" href='" . $INSTALLER09['baseurl'] . "/index.php'>
+    <img src="http://i.imgur.com/Liaqweo.png" alt="RisiTorrent" width="112" height="28">
+  </a>
    <div class='container'>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class='navbar-header'>
@@ -275,7 +260,7 @@ $htmlout .='
     }
     }
     if ($CURUSER) {
-    $htmlout.= '<div class="container"> 
+    $htmlout.= '<div class="container">
     <div id="control_panel"><a href="#" id="control_label"></a></div>';}
     return $htmlout;
    }
@@ -359,7 +344,7 @@ $htmlout .='
   if ($CURUSER) {
         /** just in case **/
         $htmlfoot.= "
-			<div class='panel panel-default'>	
+			<div class='panel panel-default'>
 				<div class='panel-body'>
 				<div class='pull-left'>
 				" . $INSTALLER09['site_name'] . " {$lang['gl_stdfoot_querys_page']}" . $r_seconds . " {$lang['gl_stdfoot_querys_seconds']}<br />" . "
@@ -426,8 +411,8 @@ if ($ratioq < 0.95) {
 		break;
 		default:
 	   $max = 99;
-	}	
- }   
+	}
+ }
 }
 else
 $max = 999;
