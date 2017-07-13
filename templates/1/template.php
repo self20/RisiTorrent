@@ -116,26 +116,20 @@ $htmlout .='
     <body class='{$body_class}'>";
   if ($CURUSER) {
    $htmlout .="
+
    <nav class='navbor'>
+
    <div class='navbor-brand'>
+
   <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
-    <img src='http://bulma.io/images/bulma-logo.png' alt='RisiTorrent' width='112' height='28'>
+    <img src='http://i.imgur.com/Liaqweo.png' alt='RisiTorrent' width='112' height='28'>
   </a>
-   <div class='container'>
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class='navbar-header'>
-      <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-exl-collapse'>
-        <span class='sr-only'>Toggle navigation</span>
-        <span class='icon-bar'></span>
-        <span class='icon-bar'></span>
-        <span class='icon-bar'></span>
-      </button>
-     <a class='navbar-brand' href='" . $INSTALLER09['baseurl'] . "/index.php'>{$INSTALLER09['site_name']}</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-     <div class='collapse navbar-collapse navbar-exl-collapse'>
-        <ul class='nav navbar-nav navbar-right'>
-        <a class='btn btn-success btn-sm' href='" . $INSTALLER09['baseurl'] . "/donate.php'>{$lang['gl_donate']}</a>
+
+   <div id='navMenu' class='navbor-menu'>
+
+    <div class='navbor-start'>
+
+        <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/donate.php'>{$lang['gl_donate']}</a>
         <a class='btn btn-primary btn-sm' href='" . $INSTALLER09['baseurl'] . "/forums.php'>{$lang['gl_forums']}</a>
 	<div class='btn-group'>
 					  <button class='btn btn-primary navbar-btn btn-sm'>{$lang['gl_general']}</button>
