@@ -117,9 +117,9 @@ $htmlout .='
   if ($CURUSER) {
    $htmlout .="
    <nav class='navbor'>
-   <div class="navbor-brand">
-  <a class="navbor-item" href='" . $INSTALLER09['baseurl'] . "/index.php'>
-    <img src="http://i.imgur.com/Liaqweo.png" alt="RisiTorrent" width="112" height="28">
+   <div class='navbor-brand'>
+  <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
+    <img src='http://bulma.io/images/bulma-logo.png' alt='RisiTorrent' width='112' height='28'>
   </a>
    <div class='container'>
     <!-- Brand and toggle get grouped for better mobile display -->
