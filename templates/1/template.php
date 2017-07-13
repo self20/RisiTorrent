@@ -137,7 +137,7 @@ $htmlout .='
 
 					  <div class='navbor-dropdown'>
 
-        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/topten.php'>{$lang['gl_stats']}</a>
+        			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/topten.php'><font color='#4a4a4a'{$lang['gl_stats']}</font></a>
         			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/faq.php'>{$lang['gl_faq']}</a>
         			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/rules.php'>{$lang['gl_rules']}</a>
         			<a class 'navbor-item' href='" . $INSTALLER09['baseurl'] . "/chat.php'>{$lang['gl_irc']}</a>
