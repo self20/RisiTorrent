@@ -1,15 +1,15 @@
 <?php
 /**
  |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
+ |   https://github.com/Bigjoos/                			    |
  |--------------------------------------------------------------------------|
- |   Licence Info: WTFPL                                                    |
+ |   Licence Info: GPL			                                    |
  |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
+ |   Copyright (C) 2010 U-232 V5					    |
  |--------------------------------------------------------------------------|
  |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
  |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |   Project Leaders: Mindless, Autotron, whocares, Swizzles.					    |
  |--------------------------------------------------------------------------|
   _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
  / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
@@ -23,12 +23,12 @@ dbconn();
 global $CURUSER;
 if (!$CURUSER) {
     get_template();
-} else {
+}
+if (isset($CURUSER)) {
     header("Location: {$INSTALLER09['baseurl']}/index.php");
     exit();
 }
 ini_set('session.use_trans_sid', '0');
-if ($INSTALLER09['captcha_on'] === true){
 $stdfoot = array(
     /** include js **/
     'js' => array(
@@ -36,16 +36,8 @@ $stdfoot = array(
         'jquery.pstrength-min.1.2',
         'jquery.simpleCaptcha-0.2'
     )
-); } else {
-$stdfoot = array(
-    /** include js **/
-    'js' => array(
-        'check',
-        'jquery.pstrength-min.1.2'
-    )
-); }
-$lang = array_merge(load_language('global') , load_language('signup'));
-if (!$INSTALLER09['openreg']) stderr($lang['stderr_errorhead'],  "{$lang['signup_inviteonly']}<a href='" . $INSTALLER09['baseurl'] . "/invite_signup.php'><b>&nbsp;{$lang['signup_here']}</b></a>");
+);
+if (!$INSTALLER09['openreg']) stderr('Sorry', 'Invite only - Signups are closed presently if you have an invite code click <a href="' . $INSTALLER09['baseurl'] . '/invite_signup.php"><b> Here</b></a>');
 $HTMLOUT = $year = $month = $day = $gender = '';
 $HTMLOUT.= "
     <script type='text/javascript'>
@@ -55,6 +47,7 @@ $HTMLOUT.= "
     });
     /*]]>*/
     </script>";
+$lang = array_merge(load_language('global') , load_language('signup'));
 $newpage = new page_verify();
 $newpage->create('tesu');
 if (get_row_count('users') >= $INSTALLER09['maxusers']) stderr($lang['stderr_errorhead'], sprintf($lang['stderr_ulimit'], $INSTALLER09['maxusers']));
@@ -97,20 +90,22 @@ $value = array(
     '...'
 );
 $value[rand(1, count($value) - 1) ] = 'X';
-$HTMLOUT.= "".($INSTALLER09['captcha_on'] ? "<script type='text/javascript'>
+$HTMLOUT.= "<script type='text/javascript'>
 	  /*<![CDATA[*/
 	  $(document).ready(function () {
 	  $('#captchasignup').simpleCaptcha();
     });
     /*]]>*/
-    </script>" : "")."
-<div style='width:75%; margin:auto auto; margin-top:-4%;'>
-    <form class='col-md-12 form-horizontal panel inverse' style='padding-top:2%;' role='form' method='post' title='signup' action='takesignup.php'>
+    </script>
+	    <img src='images/bg.jpg' id='bg' />
+        	<link rel='stylesheet' type='text/css' href='signup.css' />
+
+<div  style='width:75%; margin:auto auto; margin-top:-4%;'>
+    <form class='col-md-12 form-horizontal panel inverse signup-form' style='padding-top:2%;' role='form' method='post' title='signup' action='takesignup.php'>
 <div class='form-group'><div class='col-sm-9 col-sm-offset-1'><input  type='text' class='form-control'  placeholder='{$lang['signup_uname']}' name='wantusername' id='wantusername' onblur='checkit();'></div></div>
 <div class='form-group'><div id='namecheck' class='col-sm-9 col-sm-offset-1'></div></div>
 <div class='form-group'><div class='col-sm-9 col-sm-offset-1'><input class='form-control' type='password' placeholder='{$lang['signup_pass']}' name='wantpassword'></div></div>
 <div class='form-group'><div class='col-sm-9 col-sm-offset-1'><input type='password' class='form-control' placeholder='{$lang['signup_passa']}' name='passagain'></div></div>
-<div class='form-group'><div class='col-sm-5 col-sm-offset-1'><input type='text' class='form-control' placeholder='Choose a 4 digit Pin Code' name='pin_code'></div><div class='col-sm-4'><input type='text' class='form-control' placeholder='Repeat Pin Code' name='pin_code2'></div></div>
 <div class='form-group'><div class='col-sm-9 col-sm-offset-1'><input type='text' class='form-control' placeholder='{$lang['signup_email']}' name='email'></div></div>
 
 <div class='form-group'><div class='col-sm-9 col-sm-offset-1'><span style='font-size:100%;'>{$lang['signup_valemail']}</span></div></div>
@@ -191,7 +186,8 @@ foreach ($questions as $sph) {
 }
 $HTMLOUT.= "
 <div class='form-group'><div class='col-sm-9 col-sm-offset-1'>{$lang['signup_select']}</div></div>
-<div class='form-group'><div class='col-sm-9 col-sm-offset-1'><select class='form-control' name='passhint'>\n$passhint\n</select></div></div><div class='form-group'><div class='col-sm-9 col-sm-offset-1'><input type='text' class='form-control' placeholder='{$lang['signup_hint_here']}{$lang['signup_this_answer']}{$lang['signup_this_answer1']}' name='hintanswer'></div></div>
+<div class='form-group'><div class='col-sm-9 col-sm-offset-1'><select class='form-control' name='passhint'>\n$passhint\n</select></div></div>
+<div class='form-group'><div class='col-sm-9 col-sm-offset-1'><input type='text' class='form-control' placeholder='Enter&nbsp;Your&nbsp;Hint&nbsp;Answer&nbsp;Here.{$lang['signup_this_answer']}{$lang['signup_this_answer1']}' name='hintanswer'></div></div>
 <div class='form-group'>
 <div class='col-sm-5 col-sm-offset-1'>{$lang['signup_country']}<select class='form-control' name='country'>\n$country\n</select></div>
 &nbsp;&nbsp;&nbsp;&nbsp;{$lang['signup_gender']}$gender
@@ -201,10 +197,10 @@ $HTMLOUT.= "
 <div class='checkbox'><label><input type='checkbox' name='faqverify' value='yes'> {$lang['signup_faq']}</label></div>
 <div class='checkbox'><label><input type='checkbox' name='ageverify' value='yes'> {$lang['signup_age']}</label></div>
 </div></div>" . ($INSTALLER09['captcha_on'] ? "<div class='form-group'><div class='col-sm-9 col-sm-offset-1' id='captchasignup'></div></div>" : "") . "
-<div class='form-group'><div class='col-sm-9 col-sm-offset-1' style='text-align:center'>{$lang['signup_click']}&nbsp;<strong>{$lang['signup_x']}</strong>&nbsp;{$lang['signup_click1']}<br />
+<div class='form-group'><div class='col-sm-9 col-sm-offset-3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$lang['signup_click']}&nbsp;<strong>&nbsp;{$lang['signup_x']}&nbsp;</strong>&nbsp;{$lang['signup_click1']}<br>
     ";
 for ($i = 0; $i < count($value); $i++) {
-    $HTMLOUT.= "<div style='display:inline-block;width:15px;'></div><span><input name=\"submitme\" type=\"submit\" value=\"" . $value[$i] . "\" class=\"btn\"></span>";
+    $HTMLOUT.= "<div style='display:inline-block;width:15px;margin-left:30px;'></div><span><input name=\"submitme\" type=\"submit\" value=\"" . $value[$i] . "\" class=\"btn btn-primary\"></span>";
 }
 $HTMLOUT.= "</div></div></form></div>";
 echo stdhead($lang['head_signup']) . $HTMLOUT . stdfoot($stdfoot);
