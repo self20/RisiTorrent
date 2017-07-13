@@ -33,7 +33,6 @@ function failedloginscheck()
         stderr($lang['tlogin_locked'], "{$lang['tlogin_lockerr1']} . <b>(" . htmlsafechars($ip) . ")</b> . {$lang['tlogin_lockerr2']}");
     }
 } // End
-
 if (!mkglobal('username:password'))
       die('Something went wrong');
 
