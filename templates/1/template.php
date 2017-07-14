@@ -121,9 +121,9 @@ $htmlout .='
 
    <div class='navbor-brand'>
 
-  <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
-    <img src='http://i.imgur.com/bwMoTR3.png' alt='RisiTorrent' width='112' height='28'>
-  </a>
+   <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
+      <img src='http://i.imgur.com/bwMoTR3.png' alt='RisiTorrent' width='112' height='28'>
+   </a>
 
    <div id='navMenu' class='navbor-menu'>
 
@@ -133,7 +133,7 @@ $htmlout .='
 
 	      <div class='navbor-item has-dropdown is-hoverable'>
 
-					  <a class='navbor-link  is-active'>{$lang['gl_general']}</a>
+					  <a class='navbor-link is-active'>{$lang['gl_general']}</a>
 
 					  <div class='navbor-dropdown'>
 
@@ -181,28 +181,33 @@ $htmlout .='
 					 </div>
         </div>
 
-				<div class='btn-group'>
-					  <button class='btn btn-primary navbar-btn btn-sm'>Pers Tools</button>
-					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
-						<span class='caret'></span>
-					  </button>
-					  <ul class='dropdown-menu pull-right'>
-						<!-- dropdown menu links -->
-   		<li><a href='#' onclick='themes();'>{$lang['gl_theme']}</a></li>
-		<li><a href='#' onclick='language_select();'>{$lang['gl_language_select']}</a></li>
-		<li><a href='" . $INSTALLER09['baseurl'] . "/pm_system.php'>{$lang['gl_pms']}</a></li>
-		<li><a href='" . $INSTALLER09['baseurl'] . "/usercp.php?action=default'>{$lang['gl_usercp']}</a></li>
- 	    <!-- <li><a href='" . $INSTALLER09['baseurl'] . "/friends.php'>{$lang['gl_friends']}</a></li> -->
-		<li class='divider'></li>
-		<li>" . (isset($CURUSER) && $CURUSER['got_blocks'] == 'yes' ? "{$lang['gl_userblocks']}<a href='./user_blocks.php'>My Blocks</a>" : "") . "</li>
-		<li>" . (isset($CURUSER) && $CURUSER['got_moods'] == 'yes' ? "<a href='./user_unlocks.php'>My Unlocks</a>" : "") . "</li>
-					  </ul>
-					</div>
-		<a class='btn btn-warning btn-sm' href='" . $INSTALLER09['baseurl'] . "/logout.php?hash_please={$salty}'>{$lang['gl_logout']}</a>
+      <div class='navbor-item has-dropdown is-hoverable'>
 
-     </ul>
-    </div><!-- /.navbar-collapse -->
-</div></nav><div class='banners'></div>";
+           <a class='navbor-link is-active' href='" . $INSTALLER09['baseurl'] . "/usercp.php?action=default'>{$lang['gl_usercp']}</a>
+
+           <div class='navbor-dropdown'>
+
+		          <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/pm_system.php'>{$lang['gl_pms']}</a>
+              <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/friends.php'>{$lang['gl_friends']}</a>
+
+           </div>
+      </div>
+
+      <div class='navbor-item has-dropdown is-hoverable'>
+
+          <a class='navbor-link is-active'>Configuration</a>
+
+		      " . (isset($CURUSER) && $CURUSER['got_blocks'] == 'yes' ? "{$lang['gl_userblocks']}<a class='navbor-item' href='./user_blocks.php'>Mes blocs</a>" : "") . "
+		      " . (isset($CURUSER) && $CURUSER['got_moods'] == 'yes' ? "<a class='navbor-item' href='./user_unlocks.php'>My Unlocks</a>" : "") . "
+
+		  <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/logout.php?hash_please={$salty}'>{$lang['gl_logout']}</a>
+
+    </div>
+    </div>
+    </div>
+    </nav>
+
+    <div class='banners'></div>";
 		$htmlout .='<div class="alert" style="background:rgba(0, 0, 0, 0.1);">'.StatusBar().'</div>';
 		$htmlout .="
     <!-- U-232 Source - Print Global Messages Start -->
