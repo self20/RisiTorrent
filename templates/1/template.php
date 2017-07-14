@@ -207,7 +207,7 @@ $htmlout .='
 
      </div>
 
-     <div class='end'>
+     <div class='navbor-end'>
 
 		  <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/logout.php?hash_please={$salty}'>{$lang['gl_logout']}</a>
 
