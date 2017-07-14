@@ -138,7 +138,7 @@ $htmlout .='
 					  <div class='navbor-dropdown'>
 
         			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/topten.php'>{$lang['gl_stats']}</a>
-        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/faq.php'>{$lang['gl_faq']}></a>
+        			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/faq.php'>{$lang['gl_faq']}</a>
         			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/rules.php'>{$lang['gl_rules']}</a>
         			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/chat.php'>{$lang['gl_irc']}</a>
         			<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/staff.php'>{$lang['gl_staff']}</a>
@@ -151,22 +151,23 @@ $htmlout .='
  					  </div>
 			  </div>
 
-				<div class='btn-group'>
-					  <button class='btn btn-primary navbar-btn btn-sm'>{$lang['gl_torrent']}</button>
-					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
-						<span class='caret'></span>
-					  </button>
-					  <ul class='dropdown-menu pull-right'>
-						<!-- dropdown menu links -->
- 	    <li><a href='" . $INSTALLER09['baseurl'] . "/browse.php'>{$lang['gl_torrents']}</a></li>
-		<li><a href='" . $INSTALLER09['baseurl'] . "/requests.php'>{$lang['gl_requests']}</a></li>
-	    <li><a href='" . $INSTALLER09['baseurl'] . "/offers.php'>{$lang['gl_offers']}</a></li>
-	    <li><a href='" . $INSTALLER09['baseurl'] . "/needseed.php?needed=seeders'>{$lang['gl_nseeds']}</a></li>
-		" . (isset($CURUSER) && $CURUSER['class'] <= UC_VIP ? "<li><a href='" . $INSTALLER09['baseurl'] . "/uploadapp.php'>{$lang['gl_uapp']}</a> </li>" : "<li><a href='" . $INSTALLER09['baseurl'] . "/upload.php'>{$lang['gl_upload']}</a></li>") . "
-                " . (isset($CURUSER) && $CURUSER['class'] <= UC_VIP ? "" : "<li><a href='" . $INSTALLER09['baseurl'] . "/multiupload.php'>{$lang['gl_mupload']}</a></li>") . "
-        <li><a href='" . $INSTALLER09['baseurl'] . "/bookmarks.php'>{$lang['gl_bookmarks']}</a></li>
-					  </ul>
-					</div>
+				<div class='navbor-item has-dropdown '>
+
+					  <a class='navbor-link is-active'>{$lang['gl_torrent']}</button>
+
+            <div class='navbor-dropdown'>
+
+ 	            <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/browse.php'>{$lang['gl_torrents']}</a>
+		          <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/requests.php'>{$lang['gl_requests']}</a>
+	            <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/offers.php'>{$lang['gl_offers']}</a>
+	            <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/needseed.php?needed=seeders'>{$lang['gl_nseeds']}</a>
+		          " . (isset($CURUSER) && $CURUSER['class'] <= UC_VIP ? "<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/uploadapp.php'>{$lang['gl_uapp']}</a>" : "<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/upload.php'>{$lang['gl_upload']}</a>") . "
+              " . (isset($CURUSER) && $CURUSER['class'] <= UC_VIP ? "" : "<li><a href='" . $INSTALLER09['baseurl'] . "/multiupload.php'>{$lang['gl_mupload']}</a></li>") . "
+             <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/bookmarks.php'>{$lang['gl_bookmarks']}</a>
+
+					  </div>
+       </div>
+
 				<!-- <div class='btn-group'>
 					  <button class='btn btn-primary navbar-btn btn-sm'>{$lang['gl_games']}</button>
 					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
