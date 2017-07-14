@@ -168,29 +168,19 @@ $htmlout .='
 					  </div>
        </div>
 
-				<!-- <div class='btn-group'>
-					  <button class='btn btn-primary navbar-btn btn-sm'>{$lang['gl_games']}</button>
-					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
-						<span class='caret'></span>
-					  </button>
-					  <ul class='dropdown-menu pull-right'>
-						<!-- dropdown menu links -->
-		<!-- " . (isset($CURUSER) && $CURUSER['class'] >= UC_POWER_USER ? "<li><a href='" . $INSTALLER09['baseurl'] . "/casino.php'>{$lang['gl_casino']}</a></li>" : "") . "
-		" . (isset($CURUSER) && $CURUSER['class'] >= UC_POWER_USER ? "<li><a href='" . $INSTALLER09['baseurl'] . "/blackjack.php'>{$lang['gl_bjack']}</a></li>" : "") . "
-					  </ul>
-					</div> -->
-				<div class='btn-group'>
-					  <button class='btn btn-primary navbar-btn btn-sm'>Staff Tools</button>
-					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
-						<span class='caret'></span>
-					  </button>
-					  <ul class='dropdown-menu pull-right'>
-						<!-- dropdown menu links -->
-						   <li> " . (isset($CURUSER) && $CURUSER['class'] < UC_STAFF ? "<a class='brand' href='" . $INSTALLER09['baseurl'] . "/bugs.php?action=add'>{$lang['gl_breport']}</a>" : "<a class='brand' href='" . $INSTALLER09['baseurl'] . "/bugs.php?action=bugs'>{$lang['gl_brespond']}</a>") . "</li>
-							<li>" . (isset($CURUSER) && $CURUSER['class'] < UC_STAFF ? "<a class='brand' href='" . $INSTALLER09['baseurl'] . "/contactstaff.php'>{$lang['gl_cstaff']}</a>" : "<a class='brand' href='" . $INSTALLER09['baseurl'] . "/staffbox.php'>{$lang['gl_smessages']}</a>") . "</li>
-							" . (isset($CURUSER) && $CURUSER['class'] >= UC_STAFF ? "<li><a href='" . $INSTALLER09['baseurl'] . "/staffpanel.php'>{$lang['gl_admin']}</a></li>" : "") . "
-					  </ul>
-					</div>
+				<div class='navbor-item has-dropdown is-hoverable'>
+
+            <a class='navbor-link is-active'>Support</a>
+
+            <div class='navbor-dropdown'>
+
+						      " . (isset($CURUSER) && $CURUSER['class'] < UC_STAFF ? "<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/bugs.php?action=add'>{$lang['gl_breport']}</a>" : "<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/bugs.php?action=bugs'>{$lang['gl_brespond']}</a>") . "
+						      " . (isset($CURUSER) && $CURUSER['class'] < UC_STAFF ? "<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/contactstaff.php'>{$lang['gl_cstaff']}</a>" : "<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/staffbox.php'>{$lang['gl_smessages']}</a>") . "
+							    " . (isset($CURUSER) && $CURUSER['class'] >= UC_STAFF ? "<a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/staffpanel.php'>{$lang['gl_admin']}</a>" : "") . "
+
+					 </div>
+        </div>
+
 				<div class='btn-group'>
 					  <button class='btn btn-primary navbar-btn btn-sm'>Pers Tools</button>
 					  <button class='btn dropdown-toggle navbar-btn btn-primary btn-sm' data-toggle='dropdown'>
