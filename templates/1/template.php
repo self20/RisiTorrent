@@ -197,8 +197,13 @@ $htmlout .='
 
           <a class='navbor-link is-active'>Configuration</a>
 
-		      " . (isset($CURUSER) && $CURUSER['got_blocks'] == 'yes' ? "{$lang['gl_userblocks']}<a class='navbor-item' href='./user_blocks.php'>Mes blocs</a>" : "") . "
+          <div class='navbor-dropdown'>
+
+		      " . (isset($CURUSER) && $CURUSER['got_blocks'] == 'yes' ? "<a class='navbor-item' href='./user_blocks.php'>Mes blocs</a>" : "") . "
 		      " . (isset($CURUSER) && $CURUSER['got_moods'] == 'yes' ? "<a class='navbor-item' href='./user_unlocks.php'>My Unlocks</a>" : "") . "
+
+          </div>
+     </div>
 
 		  <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/logout.php?hash_please={$salty}'>{$lang['gl_logout']}</a>
 
