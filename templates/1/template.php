@@ -153,7 +153,7 @@ $htmlout .='
 
 				<div class='navbor-item has-dropdown is-hoverable'>
 
-					  <a class='navbor-link is-active'>{$lang['gl_torrent']}</button>
+					  <a class='navbor-link is-active'>{$lang['gl_torrent']}</a>
 
             <div class='navbor-dropdown'>
 
