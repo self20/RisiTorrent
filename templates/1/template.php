@@ -119,7 +119,7 @@ $htmlout .='
 
    <nav class='navbor'>
 
-   <div class='container'>
+   <div class='containernav'>
 
    <div class='navbor-brand'>
 

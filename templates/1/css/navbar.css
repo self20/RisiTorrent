@@ -1,14 +1,14 @@
-.container {
+.containernav {
   position: relative;
 }
 
 @media screen and (min-width: 1000px) {
-  .container {
+  .containernav {
     margin: 0 auto;
     max-width: 960px;
     width: 960px;
   }
-  .container.is-fluid {
+  .containernav.is-fluid {
     margin: 0 20px;
     max-width: none;
     width: auto;
@@ -16,20 +16,20 @@
 }
 
 @media screen and (min-width: 1192px) {
-  .container {
+  .containernav {
     max-width: 1152px;
     width: 1152px;
   }
 }
 
 @media screen and (min-width: 1384px) {
-  .container {
+  .containernav {
     max-width: 1344px;
     width: 1344px;
   }
 }
 
-.nav > .container {
+.nav > .containernav {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
