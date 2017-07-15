@@ -118,7 +118,7 @@ textarea.shrink { width:85%; }
 
 /* ================= GLOBAL STYLES  ================== */
 
-body.background-1 {background-image: url(themeChanger/images/bgs/bg-1.jpg);}
+body.background-1 {background-color: #f5f8fa;}
 body.background-2 {background-image: url(themeChanger/images/bgs/bg-2.jpg);background-color: #ccc;background-repeat: repeat-x;background-attachment: fixed;}
 body.background-3 {background-image: url(themeChanger/images/bgs/bg-3.jpg);background-color: #d6d7d7;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
 body.background-4 {background-image: url(themeChanger/images/bgs/bg-4.jpg);background-color: #0c0c0c;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
