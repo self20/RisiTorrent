@@ -119,6 +119,8 @@ $htmlout .='
 
    <nav class='navbor'>
 
+   <div class='container'>
+
    <div class='navbor-brand'>
 
    <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
@@ -214,7 +216,7 @@ $htmlout .='
 		     <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/logout.php?hash_please={$salty}'>{$lang['gl_logout']}</a>
 
      </div>
-
+    </div>
     </nav>
 
     <div class='banners'></div>";
