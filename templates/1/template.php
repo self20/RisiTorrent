@@ -124,7 +124,7 @@ $htmlout .='
    <div class='navbor-brand'>
 
    <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
-      <img src='/../templates/1/themeChanger/images' alt='RisiTorrent' width='112' height='28'>
+      <img src='/../templates/1/themeChanger/images/logo.png' alt='RisiTorrent' width='112' height='28'>
    </a>
 
    <div id='navMenu' class='navbor-menu'>
