@@ -52,7 +52,7 @@ $htmlout .='
     	<script src="scripts/jquery-1.11.1.js"></script>
       	<script src="scripts/bootstrap.js"></script>
         <link rel="stylesheet" href="css/global_media.css" type="text/css" />
-        <link rel="stylesheet" href="templates/1/css/navbar.css" type="text/css" />
+        <link rel="stylesheet" href="templates/1/css/css.css" type="text/css" />
 <!--THemechanger-->
         <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
 	<script type="text/javascript" src="scripts/help.js"></script>
@@ -117,6 +117,8 @@ $htmlout .='
   if ($CURUSER) {
    $htmlout .="
 
+/* Début navbar */
+
 <nav class='navbor has-shadow'>
 
    <div class='containernav'>
@@ -124,7 +126,7 @@ $htmlout .='
    <div class='navbor-brand'>
 
    <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/index.php'>
-      <img src='http://i.imgur.com/bwMoTR3.png' alt='RisiTorrent' width='112' height='28'>
+      <img src='/../templates/1/themeChanger/images' alt='RisiTorrent' width='112' height='28'>
    </a>
 
    <div id='navMenu' class='navbor-menu'>
@@ -207,7 +209,7 @@ $htmlout .='
           </div>
      </div>
 
-     
+
      </div>
      </div>
 
@@ -219,9 +221,11 @@ $htmlout .='
 
     </div>
 </nav>
+    /* Fin navbar */
 
+    /* Bannière */
     <div class='banners'></div>";
-		$htmlout .='<div class="alert" style="background:rgba(0, 0, 0, 0.1);">'.StatusBar().'</div>';
+		$htmlout .='<div class="alert" class="alertbar">'.StatusBar().'</div>';
 		$htmlout .="
     <!-- U-232 Source - Print Global Messages Start -->
     <div class='container'>

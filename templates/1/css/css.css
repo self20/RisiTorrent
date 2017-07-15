@@ -375,3 +375,8 @@ a.navbor-item:hover, a.navbor-item.is-active,
     background-color: whitesmoke;
   }
 }
+
+  .alertbar {
+    background: #fff;
+    box-shadow: 0 2px 3px rgba(17,17,17,.1);
+  }
