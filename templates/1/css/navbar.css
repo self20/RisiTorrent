@@ -1,5 +1,6 @@
 .containernav {
   position: relative;
+  right: 45px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -47,9 +48,10 @@
 .navbor {
   background-color: white;
   min-height: 3.25rem;
-  position: relative;
+  position: fixed;
   top: 0;
   border-width: 0 0 1px;
+  width: 2000px;
 }
 
 .navbor-brand {
