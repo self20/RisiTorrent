@@ -24,8 +24,8 @@
 
 @media screen and (min-width: 1384px) {
   .containernav {
-    max-width: 1344px;
-    width: 1344px;
+    max-width: 1150px;
+    width: 1150px;
   }
 }
 
@@ -47,11 +47,9 @@
 .navbor {
   background-color: white;
   min-height: 3.25rem;
-  position: fixed;
+  position: relative;
   top: 0;
   border-width: 0 0 1px;
-  left: 380px;
-  width: 60%;
 }
 
 .navbor-brand {
