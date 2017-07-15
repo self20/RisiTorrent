@@ -117,7 +117,7 @@ $htmlout .='
   if ($CURUSER) {
    $htmlout .="
 
-   <nav class='navbor'>
+<nav class='navbor has-shadow'>
 
    <div class='containernav'>
 
@@ -207,7 +207,7 @@ $htmlout .='
           </div>
      </div>
 
-     </div>
+     
      </div>
      </div>
 
@@ -216,8 +216,9 @@ $htmlout .='
 		     <a class='navbor-item' href='" . $INSTALLER09['baseurl'] . "/logout.php?hash_please={$salty}'>{$lang['gl_logout']}</a>
 
      </div>
+
     </div>
-    </nav>
+</nav>
 
     <div class='banners'></div>";
 		$htmlout .='<div class="alert" style="background:rgba(0, 0, 0, 0.1);">'.StatusBar().'</div>';

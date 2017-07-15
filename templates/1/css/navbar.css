@@ -40,6 +40,10 @@
   width: 100%;
 }
 
+.navbor.has-shadow{
+  box-sahdow: 0 2px 3px rgba(17,17,17,.1);
+}
+
 .navbor {
   background-color: white;
   min-height: 3.25rem;
