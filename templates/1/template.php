@@ -117,8 +117,6 @@ $htmlout .='
   if ($CURUSER) {
    $htmlout .="
 
-/* Début navbar */
-
 <nav class='navbor has-shadow'>
 
    <div class='containernav'>
@@ -221,11 +219,10 @@ $htmlout .='
 
     </div>
 </nav>
-    /* Fin navbar */
 
-    /* Bannière */
+
     <div class='banners'></div>";
-		$htmlout .='<div class="alert" class="alertbar">'.StatusBar().'</div>';
+		$htmlout .='<div class="alertbar">'.StatusBar().'</div>';
 		$htmlout .="
     <!-- U-232 Source - Print Global Messages Start -->
     <div class='container'>
