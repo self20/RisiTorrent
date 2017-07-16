@@ -28,7 +28,6 @@ $HTMLOUT.= "
 <div id='dropdown1' class='text-center shouthis collapse in'>
 <form action='shoutbox.php' method='get' target='shoutbox' name='shbox' onsubmit='mysubmit()'>
 <iframe src='{$INSTALLER09['baseurl']}/shoutbox.php' class='shout-table' name='shoutbox'></iframe>
-<div class='input-group'>
 <div class='input-group-btn dropup'>
 <button type=button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'>{$lang['index_shoutbox_shout']}&nbsp;&nbsp;<span class='caret'></span></button>
 <ul class='dropdown-menu' role='menu'>
@@ -44,7 +43,6 @@ $HTMLOUT.= "
 <input class='btn btn-primary' type='submit' value='{$lang['index_shoutbox_send']}' />
 <input type='hidden' name='sent' value='yes' />
 </span>
-</div>
 <a href=\"javascript:SmileIT(':-)','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/smile1.gif' alt='Smile' title='Smile' /></a>
 <a href=\"javascript:SmileIT(':smile:','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/smile2.gif' alt='Smiling' title='Smiling' /></a>
 <a href=\"javascript:SmileIT(':-D','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/grin.gif' alt='Grin' title='Grin' /></a>

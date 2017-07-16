@@ -434,6 +434,7 @@ a.navbor-item:hover, a.navbor-item.is-active,
     border-radius: 3px !important;
     box-shadow: none !important;
     padding: 0 12px !important;
+    color: #0a0a0a !important;
   }
 
   input.small,
