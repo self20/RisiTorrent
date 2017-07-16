@@ -39,7 +39,11 @@ $HTMLOUT.= "
 <li>{$refreshbutton}</li>
 </ul>
 </div>
-<input type='text' name='shbox_text' placeholder='Envoyer un message...'>
+<form class="form">
+    <div class="form-item">
+        <input type='text' name='shbox_text' placeholder='Envoyer un message...'>
+    </div>
+</form>
 <span class='input-group-btn'>
 <input class='btn btn-primary' type='submit' value='{$lang['index_shoutbox_send']}' />
 <input type='hidden' name='sent' value='yes' />
