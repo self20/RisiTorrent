@@ -456,10 +456,10 @@ a.navbor-item:hover, a.navbor-item.is-active,
   input:focus,
   textarea:focus,
   select:focus {
-    outline: none;
-    background-color: #fff;
-    border-color: #1c86f2;
-    box-shadow: 0 0 1px #1c86f2 inset; }
+    outline: none !important;
+    background-color: #fff !important;
+    border-color: #1c86f2 !important;
+    box-shadow: 0 0 1px #1c86f2 inset !important; }
 
   input.error,
   textarea.error,
