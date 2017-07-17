@@ -193,7 +193,11 @@ body.background-24 {background-image: url(themeChanger/images/bgs/bg-7.jpg);back
 nav ul, ul {
     list-style:none;
 }
-.bootpanel-1 .panel-body  	{background-color: #fff;}
+.bootpanel-1 .panel-body  	{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(17,17,17,.1), 0 0 0 1px rgba(17,17,17,.1);
+}
 .bootpanel-2 .panel-body      {background-image: url(themeChanger/images/bgs/bg-2.jpg);background-color: #ccc;background-repeat: repeat-x;background-attachment: fixed;}
 .bootpanel-3 .panel-body     {background-image: url(themeChanger/images/bgs/bg-3.jpg);background-color: #d6d7d7;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
 .bootpanel-4 .panel-body {background-image: url(themeChanger/images/bgs/bg-4.jpg);background-color: #0c0c0c;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
