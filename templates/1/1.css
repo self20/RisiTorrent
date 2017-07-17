@@ -193,7 +193,7 @@ body.background-24 {background-image: url(themeChanger/images/bgs/bg-7.jpg);back
 nav ul, ul {
     list-style:none;
 }
-.bootpanel-1 .panel-body  	{background-image: url(themeChanger/images/bgs/bg-1.jpg);}
+.bootpanel-1 .panel-body  	{background-color: #fff;}
 .bootpanel-2 .panel-body      {background-image: url(themeChanger/images/bgs/bg-2.jpg);background-color: #ccc;background-repeat: repeat-x;background-attachment: fixed;}
 .bootpanel-3 .panel-body     {background-image: url(themeChanger/images/bgs/bg-3.jpg);background-color: #d6d7d7;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
 .bootpanel-4 .panel-body {background-image: url(themeChanger/images/bgs/bg-4.jpg);background-color: #0c0c0c;background-position: center top;background-attachment: fixed;background-repeat: no-repeat;}
@@ -227,7 +227,7 @@ nav ul, ul {
 .listgrp-15 .list-group-item {background-image: url(themeChanger/images/bgs/bg-15.jpg);}
 .listgrp-16 .list-group-item {background-image: url(themeChanger/images/bgs/bg-16.jpg);}
 
-.panelhead-1 .panel-heading {background-image: url(themeChanger/images/bgs/navbg-1.png);}
+.panelhead-1 .panel-heading {background-color: #fff;}
 .panelhead-2 .panel-heading {background-image: url(themeChanger/images/bgs/navbg-2.jpg);}
 .panelhead-3 .panel-heading {background-image: url(themeChanger/images/bgs/navbg-3.jpg);}
 .panelhead-4 .panel-heading {background-image: url(themeChanger/images/bgs/navbg-4.jpg);}

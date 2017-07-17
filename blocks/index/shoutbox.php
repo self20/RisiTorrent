@@ -13,7 +13,7 @@ $commandbutton = "<a href=\"javascript:popUp('shoutbox_commands.php')\">{$lang['
 $refreshbutton = "<a href='shoutbox.php' target='shoutbox'>{$lang['index_shoutbox_refresh']}</a>\n";
 $smilebutton = "<a href=\"javascript:PopMoreSmiles('shbox','shbox_text')\">{$lang['index_shoutbox_smilies']}</a>\n";
 $HTMLOUT .= "<div class='boxblock shout'>";
-    $HTMLOUT .= "<div class='panel-heading'><span><a class='btn btn-default' href='{$INSTALLER09['baseurl']}/shoutbox.php?show_shout=1&amp;show=no'>{$lang['index_shoutbox_close']}</a></span>&nbsp;";
+    $HTMLOUT .= "<div class='panel-heading'>&nbsp;";
 $HTMLOUT .=  "<label for='checkbox_4' class='text-left'>";
 $HTMLOUT.= "{$lang['index_shoutbox_general']}";
 $HTMLOUT .= "</label>";
@@ -39,10 +39,6 @@ $HTMLOUT.= "
 </ul>
 </div>
 <input type='text' name='shbox_text' placeholder='Envoyer un message...'>
-<span class='input-group-btn'>
-<input class='btn btn-primary' type='submit' value='{$lang['index_shoutbox_send']}' />
-<input type='hidden' name='sent' value='yes' />
-</span>
 <a href=\"javascript:SmileIT(':-)','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/smile1.gif' alt='Smile' title='Smile' /></a>
 <a href=\"javascript:SmileIT(':smile:','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/smile2.gif' alt='Smiling' title='Smiling' /></a>
 <a href=\"javascript:SmileIT(':-D','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/grin.gif' alt='Grin' title='Grin' /></a>
@@ -66,6 +62,10 @@ $HTMLOUT.= "
 <a href=\"javascript:SmileIT(':kiss:','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/kiss.gif' alt='Kiss' title='Kiss' /></a>
 <a href=\"javascript:SmileIT(':blink:','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/blink.gif' alt='Blink' title='Blink' /></a>
 <a href=\"javascript:SmileIT(':baby:','shbox','shbox_text')\"><img src='{$INSTALLER09['pic_base_url']}smilies/baby.gif' alt='Baby' title='Baby' /></a>
+<span class='input-group-btn'>
+<input class='btn btn-primary' type='submit' value='{$lang['index_shoutbox_send']}' />
+<input type='hidden' name='sent' value='yes' />
+</span>
 </form>";
 $HTMLOUT .= "</div></div>";
 }
