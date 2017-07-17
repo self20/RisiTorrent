@@ -264,8 +264,7 @@ $htmlout .='
     }
     }
     if ($CURUSER) {
-    $htmlout.= '<div class="container">
-    <div id="control_panel"><a href="#" id="control_label"></a></div>';}
+    $htmlout.= '<div class="container">';}
     return $htmlout;
    }
 
