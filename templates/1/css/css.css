@@ -505,3 +505,11 @@ a.navbor-item:hover, a.navbor-item.is-active,
 .boxblock.shout {
   margin: 0 0 20px 0;
 }
+
+.microsoft {
+  color: #0a0a0a;
+}
+
+label {
+  color: #000;
+}
